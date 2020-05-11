@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+  client:
+    network_mode: host
+    build: docker
+    environment:
+      NODE_PATH: /client
+      VIRTUAL_HOST: cognito.localtest.me
+      VIRTUAL_PORT: 4200
+    ports:
+      - "4200:4200"
+    volumes: 
+      - .:/client
