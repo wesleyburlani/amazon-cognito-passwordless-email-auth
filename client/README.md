@@ -23,6 +23,14 @@ The Amazon Cognito User Pool back end that implements the passwordless e-mail au
 
 If you've done all this, the web app should be running at http://localhost:4200
 
+#### Running web app using docker compose
+
+If you have docker compose installed you can run the app using the following command on `client` folder:
+
+```sh
+docker-compose run client
+```
+
 ## License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.

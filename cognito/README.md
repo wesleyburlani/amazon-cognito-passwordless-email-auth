@@ -49,6 +49,26 @@ NOTE: To deploy this application _**please pick an AWS Region in which you can u
 
 if that succeeded, you have succesfully deployed your application. The outputs of the CloudFormation stack will contain the ID's of the User Pool and Client, that you can use in your client web app.
 
+#### Running Serverless Application deploy using docker compose
+
+If you have docker compose installed you can deploy using the following command on `cognito` folder:
+
+```sh
+docker-compose run cognito npm run bd
+```
+
+all of required environment variables must be typed on a .env file following the structute below:
+
+```
+AWS_ACCESS_KEY_ID=<your aws access key id>
+AWS_SECRET_ACCESS_KEY=<your aws secret key id>
+AWS_DEFAULT_REGION=<the aws regiont to be used>
+S3_BUCKET_NAME=<your s3 bucket name>
+SES_FROM_ADDRESS=<the verfied e-mail address in SES>
+STACK_NAME=<stack name to be created>
+USER_POOL_NAME=<the name you want your User Pool>
+```
+
 ## License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
